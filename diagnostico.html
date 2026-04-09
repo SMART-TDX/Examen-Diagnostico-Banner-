@@ -343,8 +343,8 @@ const PREGUNTAS = [
   { num: 4, grupo: "Persona y Registro", dimension: "inscripcion", pregunta: "¿En qué página se le inscriben manualmente los NRC a un alumno?", criterios: [{ key: "sfaregs", palabras: ["sfaregs"], peso: 100 }], respuestaCorrecta: "Página SFAREGS. Matrícula o inscripción de clases." },
 
   // MÓDULO: PLANEACIÓN ACADÉMICA
-  { num: 5, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página se utiliza para registrar el código de un edificio físico nuevo?", criterios: [{ key: "stvbldg", palabras: ["stvbldg"], peso: 100}], respuestaCorrecta: "Página STVBLDG. Registra el código de la estructura física." },
-  { num: 6, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página crea la información básica del catálogo general de un curso?", criterios: [{ key: "scacrse", palabras: ["scacrse"], peso: 100 }], respuestaCorrecta: "Página SCACRSE. Define la base y materias del catálogo." },
+  { num: 5, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página se utiliza para registrar las sedes asociadas a cada regional?", criterios: [{ key: "slabldg", palabras: ["slabldg"], peso: 100}], respuestaCorrecta: "Página SLABLDG.. Registra el código de la estructura física." },
+  { num: 6, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página crea la información de las clases?", criterios: [{ key: "scacrse", palabras: ["scacrse"], peso: 100 }], respuestaCorrecta: "Página SCACRSE. Define la base y materias del catálogo." },
   { num: 7, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿En qué página se definen las reglas base de un programa académico?", criterios: [{ key: "smaprle", palabras: ["smaprle"], peso: 100 }], respuestaCorrecta: "Página SMAPRLE. Asocia el nivel, grado y carrera al programa." },
   { num: 8, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página se usa para crear la oferta de clases (NRC) y asignarle su horario?", criterios: [{ key: "ssasect", palabras: ["ssasect"], peso: 100 }], respuestaCorrecta: "Página SSASECT. Crea la sección, cupos y horario." },
 
@@ -357,7 +357,7 @@ const PREGUNTAS = [
   { num: 12, grupo: "Notas e Historia Académica", dimension: "notas", pregunta: "¿Qué página muestra el historial de calificaciones finales y el promedio (GPA)?", criterios: [{ key: "shagrde", palabras: ["shagrde", "shaterm"], peso: 100 }], respuestaCorrecta: "Página SHAGRDE o SHATERM." },
 
   // MÓDULO: TITULACIÓN Y CAPP
-  { num: 13, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué página de CAPP configura los cursos y créditos de los 'Requerimientos de área'?", criterios: [{ key: "smaarea", palabras: ["smaarea"], peso: 100 }], respuestaCorrecta: "Página SMAAREA." },
+  { num: 13, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué página se configura los nivelespor lineas de negocio y se asocian las clases?", criterios: [{ key: "smaarea", palabras: ["smaarea"], peso: 100 }], respuestaCorrecta: "Página SMAAREA." },
   { num: 14, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué proceso masivo evalúa el cumplimiento del plan de estudios para la graduación?", criterios: [{ key: "smrbcmp", palabras: ["smrbcmp"], peso: 100 }], respuestaCorrecta: "Proceso SMRBCMP. Evalúa CAPP por lotes." },
   { num: 15, grupo: "Titulación y CAPP", dimension: "titulacion", pregunta: "¿En qué página radica el área encargada la solicitud inicial de grado del estudiante?", criterios: [{ key: "shagapp", palabras: ["shagapp"], peso: 100 }], respuestaCorrecta: "Página SHAGAPP." },
   { num: 16, grupo: "Titulación y CAPP", dimension: "titulacion", pregunta: "¿Qué página asienta oficialmente el título y el estatus final de 'Graduado'?", criterios: [{ key: "shadegr", palabras: ["shadegr"], peso: 100 }], respuestaCorrecta: "Página SHADEGR." },
@@ -365,7 +365,7 @@ const PREGUNTAS = [
   // MÓDULO: POPSEL Y SERVICIOS
   { num: 17, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se crea la definición base de un evento institucional?", criterios: [{ key: "slaevnt", palabras: ["slaevnt"], peso: 100 }], respuestaCorrecta: "Página SLAEVNT." },
   { num: 18, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se configuran las reglas, fechas y tarifas de los servicios web?", criterios: [{ key: "svarsrv", palabras: ["svarsrv"], peso: 100 }], respuestaCorrecta: "Página SVARSRV." },
-  { num: 19, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿Qué página usa el administrador para aprobar o rechazar un servicio solicitado en la web?", criterios: [{ key: "svasvpr", palabras: ["svasvpr"], peso: 100 }], respuestaCorrecta: "Página SVASVPR." },
+  { num: 19, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿Qué página usa para la Administración de una solicitud de servicio", criterios: [{ key: "svasvpr", palabras: ["svasvpr"], peso: 100 }], respuestaCorrecta: "Página SVASVPR." },
   { num: 20, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se habilitan las fechas y se asignan encuestas a la población objetivo?", criterios: [{ key: "gvasrvy", palabras: ["gvasrvy"], peso: 100 }], respuestaCorrecta: "Página GVASRVY." },
   { num: 21, grupo: "PopSel y Servicios", dimension: "popsel", pregunta: "¿Qué página se usa para escribir las reglas de lógica de una Selección de Población?", criterios: [{ key: "glrslct", palabras: ["glrslct"], peso: 100 }], respuestaCorrecta: "Página GLRSLCT." },
   { num: 22, grupo: "PopSel y Servicios", dimension: "popsel", pregunta: "¿Qué proceso extrae y genera la lista final de la población seleccionada en Banner?", criterios: [{ key: "glbdata", palabras: ["glbdata", "glbdataj"], peso: 100 }], respuestaCorrecta: "Proceso GLBDATA." },
@@ -491,12 +491,38 @@ function buildQuestions() {
         </div>
       </div>`;
   });
-}
- 
+} 
 // ─────────────────────────────────────────────
 // BOTÓN EVALUAR: PROCESAR TODO
 // ─────────────────────────────────────────────
+
 function evaluar() {
+  const nombreAuditor = document.getElementById('user-name').value.trim();
+
+// 1. Validar que el nombre no esté vacío
+if (nombreAuditor === "") {
+    alert("⚠️ Por favor, ingresa tu nombre.");
+    return;
+}
+
+// 2. Buscar TODOS los cuadros de texto (Banner) y listas (QA)
+const campos = document.querySelectorAll('textarea, select');
+let hayVacio = false;
+
+for (let c of campos) {
+    // Si el valor está realmente vacío o solo tiene espacios
+    if (c.value.trim() === "" || c.value.includes("Seleccione")) {
+        hayVacio = true;
+        c.style.border = "2px solid red"; // Opcional: para que veas cuál falta
+    } else {
+        c.style.border = ""; 
+    }
+}
+
+if (hayVacio) {
+    alert("⚠️ No puedes evaluar. Hay preguntas sin responder.");
+    return; // BLOQUEO TOTAL: Aquí se detiene y no hace nada de lo que sigue abajo
+}
   const nombre = document.getElementById('user-name').value.trim() || 'Evaluado';
   
   // 1. Evaluar Preguntas Banner (25 ítems)
@@ -693,19 +719,63 @@ function descargarExcel() {
     }
 }
 
+function descargarExcel() {
+    const nombre = document.getElementById('user-name').value || 'Sin nombre';
+    
+    // 1. Capturar puntaje global
+    const scoreElement = document.getElementById('score-big');
+    let puntajeGlobal = scoreElement ? scoreElement.innerText.split('/')[0].trim() + "%" : "0%";
+
+    // 2. Capturar porcentajes de los 8 módulos (usando la clase 'percentage' que tienen tus tarjetas)
+    // El orden será según aparezcan en tu pantalla de arriba a abajo, izquierda a derecha
+    const listaPorcentajes = document.querySelectorAll('.percentage'); 
+    
+    const dataExcel = [
+        ["INFORME DE DIAGNÓSTICO - BANNER"],
+        ["AUDITOR:", nombre],
+        ["PUNTAJE GLOBAL:", puntajeGlobal],
+        ["FECHA:", new Date().toLocaleString()],
+        [""],
+        ["RESULTADOS POR MÓDULO"],
+        ["MÓDULO", "PORCENTAJE"],
+        ["PRUEBAS QA (CONTRATOS)", listaPorcentajes[0]?.innerText || "0%"],
+        ["PERSONA Y REGISTRO", listaPorcentajes[1]?.innerText || "0%"],
+        ["PLANEACIÓN ACADÉMICA", listaPorcentajes[2]?.innerText || "0%"],
+        ["GESTIÓN DOCENTE", listaPorcentajes[3]?.innerText || "0%"],
+        ["NOTAS E HISTORIA ACAD.", listaPorcentajes[4]?.innerText || "0%"],
+        ["TITULACIÓN Y CAPP", listaPorcentajes[5]?.innerText || "0%"],
+        ["POPSEL Y SERVICIOS", listaPorcentajes[6]?.innerText || "0%"],
+        ["CUENTAS POR COBRAR (CXC)", listaPorcentajes[7]?.innerText || "0%"]
+    ];
+
+    // 3. Generar el archivo Excel
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(dataExcel);
+    XLSX.utils.book_append_sheet(wb, ws, "Resultados");
+    XLSX.writeFile(wb, `Diagnostico_${nombre}.xlsx`);
+}
 function solucionFinal() {
+    // 1. Descargamos el Excel (esto ya sabemos que funciona y detecta el 33%)
     descargarExcel();
 
-    // Intentamos capturar el puntaje de la variable global o del elemento score-big
-    let puntajeReal = "0%";
+    // 2. CAPTURA SEGURA: Vamos a buscar el porcentaje de la tarjeta de "PRUEBAS QA"
+    // ya que ese es el que confirmaste que tiene el dato real.
+    let porcentajeReal = "0%";
     
-    // Buscamos dentro de score-big el número
-    const scoreElement = document.getElementById('score-big');
-    if (scoreElement) {
-        // Esto limpia el "—/100" o "9/100" y se queda solo con el número
-        let texto = scoreElement.innerText.split('/')[0].trim();
-        if (texto !== "—" && texto !== "") {
-            puntajeReal = texto + "%";
+    // Buscamos todos los elementos que tengan la clase 'percentage'
+    const tarjetasPorcentaje = document.querySelectorAll('.percentage');
+    
+    // Si la primera tarjeta (PRUEBAS QA) tiene datos, la usamos
+    if (tarjetasPorcentaje.length > 0 && tarjetasPorcentaje[0].innerText !== "0%") {
+        porcentajeReal = tarjetasPorcentaje[0].innerText;
+    } else {
+        // Si no, intentamos sacar el puntaje global del círculo grande
+        const scoreElement = document.getElementById('score-big');
+        if (scoreElement) {
+            let texto = scoreElement.innerText.split('/')[0].trim();
+            if (texto !== "—" && texto !== "") {
+                porcentajeReal = texto + "%";
+            }
         }
     }
 
@@ -714,25 +784,153 @@ function solucionFinal() {
     const datosParaEnviar = {
         fecha: new Date().toLocaleString(),
         nombre: document.getElementById('user-name').value || 'Sin nombre',
-        porcentaje: puntajeReal, 
-        // Si tienes la variable de brechas, la enviamos, si no, el Script pondrá el nivel solo
+        porcentaje: porcentajeReal, 
         brechas: (typeof brechasTotales !== 'undefined' && brechasTotales.length > 0) 
                  ? brechasTotales.join(" | ") 
-                 : "Ver reporte"
+                 : "Ver detalle en Excel"
     };
 
-    fetch(url, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(datosParaEnviar)
-    });
+    // 3. Envío con un pequeño retraso para asegurar que los datos existan
+    setTimeout(() => {
+        fetch(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(datosParaEnviar)
+        });
+    }, 500);
 
     const btn = document.getElementById('btn-descargar-pdf');
     if(btn) {
-        btn.innerText = "¡PROCESO FINALIZADO!";
+        btn.innerText = "¡ENVIADO CORRECTAMENTE!";
         btn.style.backgroundColor = "#28a745";
     }
 }
+
+
+function descargarExcel() {
+    const nombre = document.getElementById('user-name').value || 'Sin nombre';
+    const scoreElement = document.getElementById('score-big');
+    let puntajeGlobal = scoreElement ? scoreElement.innerText.split('/')[0].trim() + "%" : "0%";
+
+    // CAPTURA DIRECTA: 
+    // Usamos el texto de los elementos con clase 'percentage'
+    // Pero forzamos una re-lectura de los elementos del DOM
+    const modulos = document.querySelectorAll('.percentage');
+    
+    const dataExcel = [
+        ["INFORME DE DIAGNÓSTICO - BANNER"],
+        ["AUDITOR:", nombre],
+        ["PUNTAJE GLOBAL:", puntajeGlobal],
+        ["FECHA:", new Date().toLocaleString()],
+        [""],
+        ["RESULTADOS POR MÓDULO"],
+        ["MÓDULO", "PORCENTAJE"],
+        ["PRUEBAS QA (CONTRATOS)", modulos[0]?.innerText || "0%"],
+        ["PERSONA Y REGISTRO", modulos[1]?.innerText || "0%"],
+        ["PLANEACIÓN ACADÉMICA", modulos[2]?.innerText || "0%"],
+        ["GESTIÓN DOCENTE", modulos[3]?.innerText || "0%"],
+        ["NOTAS E HISTORIA ACAD.", modulos[4]?.innerText || "0%"],
+        ["TITULACIÓN Y CAPP", modulos[5]?.innerText || "0%"],
+        ["POPSEL Y SERVICIOS", modulos[6]?.innerText || "0%"],
+        ["CUENTAS POR COBRAR (CXC)", modulos[7]?.innerText || "0%"]
+    ];
+
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(dataExcel);
+    XLSX.utils.book_append_sheet(wb, ws, "Resultados");
+    XLSX.writeFile(wb, `Diagnostico_${nombre}.xlsx`);
+}
+
+function descargarExcel() {
+    const nombre = document.getElementById('user-name').value || 'Sin nombre';
+    const scoreElement = document.getElementById('score-big');
+    let puntajeGlobal = scoreElement ? scoreElement.innerText.split('/')[0].trim() + "%" : "0%";
+
+    // Seleccionamos todas las tarjetas con la clase exacta que vimos: dim-card
+    const tarjetas = document.querySelectorAll('.dim-card');
+    
+    // Función para sacar el porcentaje de cada tarjeta de forma segura
+    const obtenerValor = (index) => {
+        if (tarjetas[index]) {
+            // Buscamos cualquier texto que tenga un % dentro de la tarjeta
+            const texto = tarjetas[index].innerText;
+            const match = texto.match(/\d+%/); 
+            return match ? match[0] : "0%";
+        }
+        return "0%";
+    };
+
+    const dataExcel = [
+        ["INFORME DE DIAGNÓSTICO - BANNER"],
+        ["AUDITOR:", nombre],
+        ["PUNTAJE GLOBAL:", puntajeGlobal],
+        ["FECHA:", new Date().toLocaleString()],
+        [""],
+        ["RESULTADOS POR MÓDULO"],
+        ["MÓDULO", "PORCENTAJE"],
+        ["PRUEBAS QA (CONTRATOS)", obtenerValor(0)],
+        ["PERSONA Y REGISTRO", obtenerValor(1)],
+        ["PLANEACIÓN ACADÉMICA", obtenerValor(2)],
+        ["GESTIÓN DOCENTE", obtenerValor(3)],
+        ["NOTAS E HISTORIA ACAD.", obtenerValor(4)],
+        ["TITULACIÓN Y CAPP", obtenerValor(5)],
+        ["POPSEL Y SERVICIOS", obtenerValor(6)],
+        ["CUENTAS POR COBRAR (CXC)", obtenerValor(7)]
+    ];
+
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(dataExcel);
+    XLSX.utils.book_append_sheet(wb, ws, "Resultados");
+    XLSX.writeFile(wb, `Diagnostico_${nombre}.xlsx`);
+}
+
+function solucionFinal() {
+    // Le damos 2 segundos (2000ms) para que el sistema termine de pintar los números
+    // Así evitamos que capture el "0%" inicial.
+    const btnPrincipal = document.getElementById('btn-descargar-pdf');
+    if(btnPrincipal) btnPrincipal.innerText = "PROCESANDO...";
+
+    setTimeout(() => {
+        descargarExcel();
+
+        // Captura del puntaje global para Google Sheets
+        let puntajeFinal = "0%";
+        const scoreElement = document.getElementById('score-big');
+        if (scoreElement) {
+            let valor = scoreElement.innerText.split('/')[0].trim();
+            puntajeFinal = (valor !== "—" && valor !== "") ? valor + "%" : "0%";
+        }
+
+        const url = "https://script.google.com/macros/s/AKfycbx4I52ODJpOf8bQbKMRqEnFUuI9gKSoAdERoJXYU-IutzBP4Je282NQshzRPol7GJIA/exec"; 
+        
+        // 1. Capturamos los porcentajes de los 8 módulos directamente
+        const tarjetas = document.querySelectorAll('.dim-card');
+        const listaModulos = Array.from(tarjetas).map(t => {
+            const m = t.innerText.match(/\d+%/);
+            return m ? m[0] : "0%";
+        });
+
+        // 2. Armamos el objeto de datos corregido
+        const datos = {
+            fecha: new Date().toLocaleString(),
+            nombre: document.getElementById('user-name').value || 'Sin nombre',
+            porcentaje: puntajeFinal, 
+            // Reemplazamos el texto "Ver Excel" por la lista de porcentajes
+            brechas: listaModulos.length > 0 ? listaModulos.join(" | ") : "0% | 0% | 0% | 0% | 0% | 0% | 0% | 0%"
+        };
+
+        fetch(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(datos)
+        });
+
+        if(btnPrincipal) {
+            btnPrincipal.innerText = "¡REPORTE GENERADO!";
+            btnPrincipal.style.backgroundColor = "#28a745";
+        }
+    }, 2000); 
+}  
 
 buildQATesting();
 buildQuestions();

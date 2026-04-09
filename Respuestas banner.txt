@@ -1,0 +1,75 @@
+respuestas ejemplo 
+
+Pregunta 1: Utilizo la página SAAADMS para gestionar la admisión.
+
+Pregunta 2: GOAMTCH para buscar duplicados y crear el ID.
+
+Pregunta 3: Los datos biográficos van en SPAIDEN.
+
+Pregunta 4: SFAREGS para inscribir manualmente los NRC.
+
+Pregunta 5: Ingreso a STVBLDG).
+
+Pregunta 6: La información del catálogo se crea en SCACRSE.
+
+Pregunta 7: Las reglas del programa se asocian en SMAPRLE.
+
+Pregunta 8: SSASECT para crear las secciones y asignar cupos.
+
+Pregunta 9: Activo el periodo en SIAINST.
+
+Pregunta 10: El docente lo hace desde el portal de Autoservicio.
+
+Pregunta 11: SHRROLL para rolar las notas a histórico.
+
+Pregunta 12: El historial lo consulto en SHAGRDE.
+
+Pregunta 13: Configuro los créditos en SMAAREA.
+
+Pregunta 14: SMRBCMP para la auditoría masiva de CAPP.
+
+Pregunta 15: Radico la intención de grado en SHAGAPP.
+
+Pregunta 16: Asiento el título oficial en SHADEGR.
+
+Pregunta 17: Creo el evento en SLAEVNT.
+
+Pregunta 18: Las reglas de tarifas van en SVARSRV.
+
+Pregunta 19: Uso SVASVPR para aprobar el servicio.
+
+Pregunta 20:  GVASRVY es el que se usa.
+
+Pregunta 21: Escribo las reglas en GLRSLCT.
+
+Pregunta 22: El proceso de extracción es GLBDATA.
+
+Pregunta 23: Los códigos de detalle se hacen en TSADETC.
+
+Pregunta 24: TSACONT para crear el contrato.
+
+Pregunta 25: Hago el cierre de sesión en TGRCLOS.
+
+2. Sección: Conceptos de Pruebas QA (Al final)
+Parte A (Relacionar Términos - Desplegables):
+Selecciona en este orden exacto:
+
+Caso Feliz
+
+Caso Negativo
+
+Caso Alternativo
+
+Estado OK
+
+Estado Fallido
+
+Estado Bloqueado
+
+Parte B (Selección Múltiple - Bolitas de marcar):
+
+Pregunta 1: Selecciona la primera opción (Banner y Mantis).
+
+Pregunta 2: Selecciona la segunda opción (Crear un archivo de Google Docs con capturas de pantalla...).
+
+Pregunta 3: Selecciona la tercera opción (Toda la configuración previa y activaciones...).
