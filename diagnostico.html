@@ -291,7 +291,7 @@
 <button class="btn-pdf" id="btn-descargar-pdf" onclick="solucionFinal()">Finalizar y Guardar Resultados</button>
 <script>
 // ─────────────────────────────────────────────
-// DATOS: CONCEPTOS DE PRUEBAS QA (RELACIONAR Y MCQ)
+// DATOS: CONCEPTOS DE PRUEBAS QA 
 // ─────────────────────────────────────────────
 const MATCHING_TERMS = ["(Seleccione)", "Caso Feliz", "Caso Negativo", "Caso Alternativo", "Estado OK", "Estado Fallido", "Estado Bloqueado"];
 const MATCHING_DEFS = [
@@ -299,16 +299,17 @@ const MATCHING_DEFS = [
   { id: "m2", text: "Prueba con datos incorrectos a propósito para validar si el sistema reacciona mostrando validaciones/errores.", answer: "Caso Negativo" },
   { id: "m3", text: "Prueba que evalúa el sistema hasta sus límites, agregando múltiples variables y flujos.", answer: "Caso Alternativo" },
   { id: "m4", text: "Ocurrió exactamente lo que se estaba esperando que pasara en el sistema.", answer: "Estado OK" },
-  { id: "m5", text: "No pasó lo que se esperaba; debe reportarse obligatoriamente en Mantis.", answer: "Estado Fallido" },
+  { id: "m5", text: "Presenta un error, ya sea en la configuración o en la interfaz debe reportarse obligatoriamente en Mantis .", answer: "Estado Fallido" },
   { id: "m6", text: "El sistema presenta un error que no permite continuar ni terminar la ejecución del caso.", answer: "Estado Bloqueado" }
 ];
 
 const MCQS = [
+  // --- Preguntas Existentes ---
   {
     id: "mcq1",
     pregunta: "¿Qué aplicativos principales se utilizarán para gestionar y reportar estas pruebas?",
     opciones: ["Banner y Mantis", "Jira y Confluence", "Smartgo y Excel"],
-    respuestaCorrecta: 0 // Index de la opción correcta
+    respuestaCorrecta: 0 // Banner y Mantis
   },
   {
     id: "mcq2",
@@ -318,7 +319,7 @@ const MCQS = [
       "Crear un archivo de Google Docs con capturas de pantalla completas (mostrando fecha, hora y página), y compartir el link público.",
       "Enviar un correo al área de TI con un documento de Word protegido."
     ],
-    respuestaCorrecta: 1
+    respuestaCorrecta: 1 // Google Docs con capturas completas
   },
   {
     id: "mcq3",
@@ -328,12 +329,40 @@ const MCQS = [
       "El resultado exacto que arrojará el sistema al finalizar.",
       "Toda la configuración previa y activaciones necesarias en el sistema para poder hacer la prueba."
     ],
-    respuestaCorrecta: 2
+    respuestaCorrecta: 2 // Configuración previa
+  },
+  {
+    id: "mcq4",
+    pregunta: "En la página STVCOLL se registran los idiomas por cada una de las líneas de negocio.",
+    opciones: ["Verdadero", "Falso"],
+    respuestaCorrecta: 1 // Falso
+  },
+  {
+    id: "mcq5",
+    pregunta: "En la página TVASDDT se configura un código de detalle a un solo documento.",
+    opciones: ["Verdadero", "Falso"],
+    respuestaCorrecta: 0 // Verdadero
+  },
+  {
+    id: "mcq6",
+    pregunta: "En la página TZAPAOR genera el boleto de inscripción del estudiante.",
+    opciones: ["Verdadero", "Falso"],
+    respuestaCorrecta: 1 // Falso
+  },
+  {
+    id: "mcq7",
+    pregunta: "¿Qué código de proceso y conjunto de regla se selecciona en GKAPPLN para que se cargue el pago?",
+    opciones: [
+      "CARGA_BANCOS_P y CARGA_BANCOS_R",
+      "CARGA_BANCO_P y CARGA_BANCO_R",
+      "CARGA_BANCOS_UP y CARGA_BANCOS_UR"
+    ],
+    respuestaCorrecta: 0 // CARGA_BANCOS_P y CARGA_BANCOS_R
   }
 ];
 
 // ─────────────────────────────────────────────
-// DATOS: PREGUNTAS BANNER (25 PREGUNTAS AJUSTADAS)
+// DATOS: PREGUNTAS BANNER (22 PREGUNTAS AJUSTADAS)
 // ─────────────────────────────────────────────
 const PREGUNTAS = [
   // MÓDULO: PERSONA Y REGISTRO
@@ -345,36 +374,35 @@ const PREGUNTAS = [
   // MÓDULO: PLANEACIÓN ACADÉMICA
   { num: 5, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página se utiliza para registrar las sedes asociadas a cada regional?", criterios: [{ key: "slabldg", palabras: ["slabldg"], peso: 100}], respuestaCorrecta: "Página SLABLDG.. Registra el código de la estructura física." },
   { num: 6, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página crea la información de las clases?", criterios: [{ key: "scacrse", palabras: ["scacrse"], peso: 100 }], respuestaCorrecta: "Página SCACRSE. Define la base y materias del catálogo." },
-  { num: 7, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿En qué página se definen las reglas base de un programa académico?", criterios: [{ key: "smaprle", palabras: ["smaprle"], peso: 100 }], respuestaCorrecta: "Página SMAPRLE. Asocia el nivel, grado y carrera al programa." },
-  { num: 8, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página se usa para crear la oferta de clases (NRC) y asignarle su horario?", criterios: [{ key: "ssasect", palabras: ["ssasect"], peso: 100 }], respuestaCorrecta: "Página SSASECT. Crea la sección, cupos y horario." },
-
+  { num: 7, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Que pagina se utiliza para validar o registrar la información ( dirección, ciudad, codigo de seven) de una sede ?", criterios: [{ key: "stvsite", palabras: ["stvsite"], peso: 100 }], respuestaCorrecta: "Página STVSITE. Valida y registra la información." },
+  { num: 8, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿En qué página se definen las reglas base de un programa académico?", criterios: [{ key: "smaprle", palabras: ["smaprle"], peso: 100 }], respuestaCorrecta: "Página SMAPRLE. Asocia el nivel, grado y carrera al programa." },
+  { num: 9, grupo: "Planeación Académica", dimension: "planeacion", pregunta: "¿Qué página registra las lineas de negocio?", criterios: [{ key: "stvlevl", palabras: ["stvlevl"], peso: 100 }], respuestaCorrecta: "Página STVLEVL. Es la que registra las lineas de negocio." },
+  
   // MÓDULO: GESTIÓN DOCENTE
-  { num: 9, grupo: "Gestión Docente", dimension: "docentes", pregunta: "¿Qué página activa el periodo institucional de un docente?", criterios: [{ key: "siainst", palabras: ["siainst"], peso: 100 }], respuestaCorrecta: "Página SIAINST." },
-  { num: 10, grupo: "Gestión Docente", dimension: "docentes", pregunta: "¿Dónde ingresa el docente sus calificaciones finales de manera autónoma?", criterios: [{ key: "autoservicio", palabras: ["autoservicio", "ssb", "portal", "web"], peso: 100 }], respuestaCorrecta: "En el portal de Autoservicio (SSB)." },
+  { num: 10, grupo: "Gestión Docente", dimension: "docentes", pregunta: "¿Qué página activa el periodo institucional de un docente?", criterios: [{ key: "siainst", palabras: ["siainst"], peso: 100 }], respuestaCorrecta: "Página SIAINST." },
+  { num: 11, grupo: "Gestión Docente", dimension: "docentes", pregunta: "¿Dónde ingresa el docente sus calificaciones finales de manera autónoma?", criterios: [{ key: "autoservicio", palabras: ["autoservicio", "ssb", "portal", "web"], peso: 100 }], respuestaCorrecta: "En el portal de Autoservicio (SSB)." },
+  { num: 12, grupo: "Gestión Docente", dimensión: "docentes", pregunta: "¿Que pagina se relaciona un salon con un docente principal o secundario?", criterios:[{ key: "szadafh", palabras: ["szadafh"], peso: 100}], respuestacorrecta: "Pagina SZADAFH."},
+
 
   // MÓDULO: NOTAS E HISTORIA ACADÉMICA
-  { num: 11, grupo: "Notas e Historia Académica", dimension: "notas", pregunta: "¿Qué proceso masivo traslada las calificaciones a la historia académica?", criterios: [{ key: "shrroll", palabras: ["shrroll"], peso: 100 }], respuestaCorrecta: "Proceso SHRROLL. Rola notas a histórico." },
-  { num: 12, grupo: "Notas e Historia Académica", dimension: "notas", pregunta: "¿Qué página muestra el historial de calificaciones finales y el promedio (GPA)?", criterios: [{ key: "shagrde", palabras: ["shagrde", "shaterm"], peso: 100 }], respuestaCorrecta: "Página SHAGRDE o SHATERM." },
+  { num: 13, grupo: "Notas e Historia Académica", dimension: "notas", pregunta: "¿Qué página muestra el historial de calificaciones finales y el promedio (GPA)?", criterios: [{ key: "shagrde", palabras: ["shagrde", "shaterm"], peso: 100 }], respuestaCorrecta: "Página SHAGRDE o SHATERM." },
 
   // MÓDULO: TITULACIÓN Y CAPP
-  { num: 13, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué página se configura los nivelespor lineas de negocio y se asocian las clases?", criterios: [{ key: "smaarea", palabras: ["smaarea"], peso: 100 }], respuestaCorrecta: "Página SMAAREA." },
-  { num: 14, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué proceso masivo evalúa el cumplimiento del plan de estudios para la graduación?", criterios: [{ key: "smrbcmp", palabras: ["smrbcmp"], peso: 100 }], respuestaCorrecta: "Proceso SMRBCMP. Evalúa CAPP por lotes." },
-  { num: 15, grupo: "Titulación y CAPP", dimension: "titulacion", pregunta: "¿En qué página radica el área encargada la solicitud inicial de grado del estudiante?", criterios: [{ key: "shagapp", palabras: ["shagapp"], peso: 100 }], respuestaCorrecta: "Página SHAGAPP." },
-  { num: 16, grupo: "Titulación y CAPP", dimension: "titulacion", pregunta: "¿Qué página asienta oficialmente el título y el estatus final de 'Graduado'?", criterios: [{ key: "shadegr", palabras: ["shadegr"], peso: 100 }], respuestaCorrecta: "Página SHADEGR." },
+  { num: 14, grupo: "Titulación y CAPP", dimension: "capp", pregunta: "¿Qué página se configura los niveles por lineas de negocio y se asocian las clases?", criterios: [{ key: "smaarea", palabras: ["smaarea"], peso: 100 }], respuestaCorrecta: "Página SMAAREA." },
 
   // MÓDULO: POPSEL Y SERVICIOS
-  { num: 17, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se crea la definición base de un evento institucional?", criterios: [{ key: "slaevnt", palabras: ["slaevnt"], peso: 100 }], respuestaCorrecta: "Página SLAEVNT." },
-  { num: 18, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se configuran las reglas, fechas y tarifas de los servicios web?", criterios: [{ key: "svarsrv", palabras: ["svarsrv"], peso: 100 }], respuestaCorrecta: "Página SVARSRV." },
-  { num: 19, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿Qué página usa para la Administración de una solicitud de servicio", criterios: [{ key: "svasvpr", palabras: ["svasvpr"], peso: 100 }], respuestaCorrecta: "Página SVASVPR." },
-  { num: 20, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿En qué página se habilitan las fechas y se asignan encuestas a la población objetivo?", criterios: [{ key: "gvasrvy", palabras: ["gvasrvy"], peso: 100 }], respuestaCorrecta: "Página GVASRVY." },
-  { num: 21, grupo: "PopSel y Servicios", dimension: "popsel", pregunta: "¿Qué página se usa para escribir las reglas de lógica de una Selección de Población?", criterios: [{ key: "glrslct", palabras: ["glrslct"], peso: 100 }], respuestaCorrecta: "Página GLRSLCT." },
-  { num: 22, grupo: "PopSel y Servicios", dimension: "popsel", pregunta: "¿Qué proceso extrae y genera la lista final de la población seleccionada en Banner?", criterios: [{ key: "glbdata", palabras: ["glbdata", "glbdataj"], peso: 100 }], respuestaCorrecta: "Proceso GLBDATA." },
+  { num: 15, grupo: "PopSel y Servicios", dimension: "servicios", pregunta: "¿Qué página usa para la Administración de una solicitud de servicio", criterios: [{ key: "svasvpr", palabras: ["svasvpr"], peso: 100 }], respuestaCorrecta: "Página SVASVPR." },
+  { num: 16, grupo: "PopSel y Servicios", dimensión: "popsel", pregunta: "¿En que pagina nos permite crear  consultar las categorias de servicio.?", criterios: [{ key: "svvsrca", palabras: ["svvsrca"], peso: 100 }], respuestacorrecta: "Página SVVSRCA."},
+  { num: 17, grupo: "PopSel y Servicios", dimesión: "Popsel", pregunta: "¿Que proceso se selecciona en la pagina GJAJFLU para importar el archivo de selección de población. ?", criterios: [{ key: "gjrpsim", palabras: ["gjrpsim"], peso: 100}], respuestaCorrecta:"Pagina GJRPSIM"},
+  { num: 18, grupo: " PopSel y Servicios", dimensión: " popsel", pregunta: "¿Que pagina se revisa los ID que tienen asociados una selección de población. ?", criterios: [{ key: "glaextr", palabras: ["glaextr"], peso: 100}], respuestaCorrecta: " Pagina GLAEXTR."},
+
 
   // MÓDULO: CXC
-  { num: 23, grupo: "Cuentas por Cobrar (CXC)", dimension: "cxc", pregunta: "¿En qué página se configuran los códigos de detalle?", criterios: [{ key: "tsadetc", palabras: ["tsadetc"], peso: 100 }], respuestaCorrecta: "Página TSADETC." },
-  { num: 24, grupo: "Cuentas por Cobrar (CXC)", dimension: "cxc", pregunta: "¿Qué página se utiliza para crear un contrato a una empresa patrocinadora?", criterios: [{ key: "tsacont", palabras: ["tsacont"], peso: 100 }], respuestaCorrecta: "Página TSACONT." },
-  { num: 25, grupo: "Cuentas por Cobrar (CXC)", dimension: "cxc", pregunta: "¿Qué proceso ejecuta el cajero para cerrar su sesión y enviar los recaudos a Finanzas?", criterios: [{ key: "tgrclos", palabras: ["tgrclos"], peso: 100 }], respuestaCorrecta: "Proceso TGRCLOS." }
-];
+  { num: 19, grupo: "Cuentas por Cobrar (CXC)", dimension: "cxc", pregunta: "¿En qué página se configuran los códigos de detalle?", criterios: [{ key: "tsadetc", palabras: ["tsadetc"], peso: 100 }], respuestaCorrecta: "Página TSADETC." },
+  { num: 20, grupo: "Cuentas por Cobrar (CXC)", dimension: "cxc", pregunta: "¿Qué página se utiliza para crear un contrato a una empresa ?", criterios: [{ key: "tsacont", palabras: ["tsacont"], peso: 100 }], respuestaCorrecta: "Página TSACONT." },
+  { num: 21, grupo: " Cuentas por Cobrar ( CXC)", dimensión: "cxc", pregunta: "¿Que pagina se configura el codigo detalle de matricula para el nivel y por programa académico. ?", criterios: [{ key: "sfargfe", palabras: ["sfargfe"], peso: 100 }], respuestaCorrecta: " Pagina SFARGFE."},
+  { num: 22, grupo: "Cuentas por Cobrar (CXC)", dimensión: "cxc", pregunta: "¿Que pagina se realizan las retenciones a un estudiante.?", criterios: [{ key: "soahold", palabras: ["soahold"], peso: 100}], respuestaCorrecta: "Pagina SOAHOLD."},
+  ];
  
 function normalizar(texto) { return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " "); }
 function contienePalabra(texto, palabras) { return palabras.some(p => normalizar(texto).includes(normalizar(p))); }
@@ -418,7 +446,6 @@ function calcularDimensiones(resultadosBanner, qaTestingResultados) {
   });
   return dims;
 }
- 
 function generarBrechas(resultadosBanner, brechasQATesting) {
   const brechas = [...brechasQATesting];
   const mapasError = {
